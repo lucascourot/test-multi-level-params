@@ -1,0 +1,34 @@
+{
+    "name": "lucascourot/test-multi-level-params",
+    "description": "Test for PR",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Courot",
+            "email": "lucas@courot.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/lucascourot/ParameterHandler"
+        }
+    ],
+    "require": {
+        "incenteev/composer-parameter-handler": "dev-recursive"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "behat.yml",
+            "parameter-key": "default"
+        }
+    }
+}

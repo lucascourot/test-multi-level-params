@@ -1,0 +1,11 @@
+# behat.yml example from http://docs.behat.org/guides/7.config.html
+default:
+    formatter:
+        name:                       pretty
+        parameters:
+            decorated:              true
+            verbose:                false
+            time:                   true
+            language:               en
+            output_path:            null
+            multiline_arguments:    true
